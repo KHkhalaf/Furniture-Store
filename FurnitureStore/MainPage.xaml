@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FurnitureStore.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:FurnitureStore.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sharedTransition="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+    xmlns:viewmodel="clr-namespace:FurnitureStore.ViewModels"
+    ios:Page.PreferredStatusBarUpdateAnimation="Fade"
+    ios:Page.PrefersHomeIndicatorAutoHidden="true"
+    ios:Page.PrefersStatusBarHidden="True"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainPageViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="65" />
+        </Grid.RowDefinitions>
+
+
+
+        <!--<BoxView Color="#7D87F1" />-->
+        <Image
+            Grid.RowSpan="4"
+            Aspect="Fill"
+            Source="header_background" />
+
+        <!--  header navigation  -->
+        <controls:TitleBar />
+
+        <Label
+            Margin="20"
+            HorizontalOptions="Start"
+            Style="{StaticResource TitleStyle}"
+            Text="IKEA Catalog"
+            VerticalOptions="End" />
+
+        <Grid
+            x:Name="CategoryGrid"
+            Grid.Row="1"
+            BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0"
+                   HeightRequest="100" 
+                   Padding="7,0" 
+                   VerticalTextAlignment="Center"
+                   Style="{StaticResource CategorySelectedHeaderStyle}"
+                   Text="Chairs">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Grid.Column="1" HeightRequest="100" Padding="7,0" VerticalTextAlignment="Center"
+                Style="{StaticResource CategoryHeaderStyle}"
+                Text="Sofas">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Grid.Column="2" HeightRequest="100" Padding="7,0" VerticalTextAlignment="Center"
+                Style="{StaticResource CategoryHeaderStyle}"
+                Text="Tables">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label
+                Grid.Column="3" HeightRequest="100" Padding="7,0" VerticalTextAlignment="Center"
+                Style="{StaticResource CategoryHeaderStyle}"
+                Text="Lamps">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </Label.GestureRecognizers>
+            </Label>
+        <BoxView  x:Name="SelectionIndicator"
+                  CornerRadius="5,5,0,0"
+                  HeightRequest="5" Grid.Column="0"
+                  HorizontalOptions="Start"
+                  VerticalOptions="End"
+                  WidthRequest="70" Margin="20,0"
+                  Color="#7C86F2" />
+        </Grid>
+        <ScrollView Orientation="Horizontal"
+                    Grid.Row="2" 
+                    VerticalOptions="Start"
+                    BackgroundColor="White"
+                    VerticalScrollBarVisibility="Never" 
+                    HorizontalScrollBarVisibility="Never">
+            <StackLayout BindableLayout.ItemsSource="{Binding Items}" 
+                         Orientation="Horizontal"
+                         VerticalOptions="CenterAndExpand">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="AUTO" />
+                            </Grid.RowDefinitions>
+                            <Image
+                            sharedTransition:Transition.Group="{Binding Name}"
+                            sharedTransition:Transition.Name="SelectedItemImage"
+                            Source="{Binding Image}" 
+                            HeightRequest="235"
+                            WidthRequest="235"/>
+
+                            <BoxView
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            HorizontalOptions="End"
+                            WidthRequest="1"
+                            Color="#A8A8A8" />
+
+                            <StackLayout Grid.Row="1" Margin="0,10,0,10">
+                                <Label Style="{StaticResource ItemName}" Text="{Binding Name}" />
+                                <Label Style="{StaticResource ItemPrice}" Text="{Binding Price,StringFormat='{0} USD'}"/>
+                            </StackLayout>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+
+        <Grid Grid.Row="3" BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image
+                HorizontalOptions="Center"
+                Source="star_icon"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                Source="home_icon"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                Source="profile_icon"
+                VerticalOptions="Center" />
+        </Grid>
+
+        <BoxView
+            Grid.Row="1"
+            HeightRequest="1"
+            VerticalOptions="End"
+            Color="#A8A8A8" />
+
+        <BoxView
+            Grid.Row="3"
+            HeightRequest="1"
+            VerticalOptions="Start"
+            Color="#A8A8A8" />
+
+    </Grid>
+
+
+</ContentPage>

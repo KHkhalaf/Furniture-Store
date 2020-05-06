@@ -1,0 +1,15 @@
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\bin\Debug\netstandard2.0\FurnitureStore.deps.json
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\bin\Debug\netstandard2.0\FurnitureStore.dll
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\bin\Debug\netstandard2.0\ref\FurnitureStore.dll
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\bin\Debug\netstandard2.0\FurnitureStore.pdb
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\FurnitureStore.csprojAssemblyReference.cache
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\App.xaml.g.cs
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\Controls\TitleBar.xaml.g.cs
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\ProductDetailsPage.xaml.g.cs
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\FurnitureStore.AssemblyInfoInputs.cache
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\FurnitureStore.AssemblyInfo.cs
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\XamlC.stamp
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\FurnitureStore.dll
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\ref\FurnitureStore.dll
+G:\courses\xamarin\Some Projects\FurnitureStore-master\src\FurnitureStore\FurnitureStore\obj\Debug\netstandard2.0\FurnitureStore.pdb
