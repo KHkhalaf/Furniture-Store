@@ -28,7 +28,7 @@ namespace FurnitureStore.ViewModels
             Categories.AddRange(DataStore.GetCategories());
             CategorySelectionChanged = new Command(DoThing);
 
-            var items = DataStore.GetItemsForCategory(SelectedCategory);
+            var items = DataStore.GetItemsForCategory("Chairs");
 
             Items = new ObservableRangeCollection<ItemsViewModel>();
             foreach (var item in items)

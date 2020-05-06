@@ -192,7 +192,7 @@ namespace FurnitureStore.Services
                 Variations = new List<Variation>()
                 {
                     new Variation () { ColorHex="#81420b", Image="lamp4" },
-                    new Variation () { ColorHex="#e8a56a", Image="lamp5" },
+                    new Variation () { ColorHex="#b6d9dd", Image="lamp5" },
                 }
             });
         }
